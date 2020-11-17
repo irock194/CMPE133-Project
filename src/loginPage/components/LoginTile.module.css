@@ -1,0 +1,8 @@
+.login_tile {
+    height: 400px;
+    width: 98;
+    align-content: center;
+    background-color: white;
+    border-top: 20px solid #EEE;
+    border-bottom: 20px solid #EEE;
+}

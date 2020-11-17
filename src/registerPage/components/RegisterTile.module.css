@@ -1,0 +1,9 @@
+.register_tile {
+    /*change the height accordance to how many text fields we are going to use*/
+    height: 600px;
+    width: 98;
+    align-content: center;
+    background-color: white;
+    border-top: 20px solid #EEE;
+    border-bottom: 20px solid #EEE;
+}

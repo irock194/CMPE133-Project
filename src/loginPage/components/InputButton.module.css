@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+}
+ul.list{
+    list-style-type: none;
+    text-align: center;
+}
+input [type="button"]{
+    background-color: #4690fb;
+    color: #fff;
+}
