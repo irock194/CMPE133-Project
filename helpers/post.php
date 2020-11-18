@@ -22,7 +22,7 @@ class Post{
             $user_added_by = $this->new_user->getUsername();
 
             //insert post
-            $query = mysqli_query($this->conn, "insert into posts values('', '$body', '', '$date_posted', 'no', 'no', '0')");
+            $query = mysqli_query($this->conn, "insert into posts values('', '$body', '', '$date_posted', 'no', '0')");
             $returned_id = mysqli_insert_id($this->conn);
 
         }
