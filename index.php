@@ -4,14 +4,15 @@ include("helpers/user.php");
 include("helpers/post.php");
 
 
+
+
 if(isset($_POST['post'])){
-    $post = new Post($conn, '');
+    $post = new Post($conn, $user_logged_in);
     $post -> submitPost($_POST['post_text']);
     header("Location: index.php");
 }
 
 ?>
-
 
 
 <div class = "news_feed column">
@@ -21,6 +22,11 @@ if(isset($_POST['post'])){
         <hr>
 
     </form>
+
+    <?php
+        $post = new Post($conn, $user_logged_in);
+        $post->loadPost();
+    ?>
 
 </div>
 

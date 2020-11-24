@@ -51,7 +51,7 @@ if(isset($_POST['register_button'])){
     }
     else{
         if(preg_match('/[^A-Za-z0-9]/', $password)){
-            array_push($error_messages,"Error: Password can only contain letters and number<br>");
+            array_push($error_messages,"Error: Password can only contain letters and numbers<br>");
         }
     }
 

@@ -1,12 +1,19 @@
 <?php
 require 'connection/connection.php';
 
+if(isset($_SESSION['username'])){
+    $user_logged_in = $_SESSION['username'];
+    $user_info = mysqli_query($conn, "select * from users where username = '$user_logged_in'");
+    $user = mysqli_fetch_array($user_info);
+}
+else{
+    header("Location: register.php");
+}
 ?>
 
 <html>
 <head>
     <title>Social Network Feed</title>   
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src = "assets/js/bootstrap.js"></script>
 
     <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -22,18 +29,17 @@ require 'connection/connection.php';
 
         <nav>
             <a href="#">
-                <i class = "fa fa-home fa-lg"></i>
+                <i>Home</i>
             </a>
             <a href="#">
-                <i class = "fa fa-users fa-lg"></i>
+                <i>Friends</i>
             </a>
             <a href="#">
-                <i class = "fa fa-envelope fa-lg"></i>
+                <i>Notifications</i>
             </a>
             <a href="#">
-                <i class = "fa fa-cog fa-lg"></i>
+                <i>Settings</i>
             </a>
         </nav>
     </div>
-</body>
-</html>
+
