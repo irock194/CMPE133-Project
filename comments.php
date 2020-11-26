@@ -49,7 +49,6 @@
             $post_body = mysqli_escape_string($conn, $post_body);
             $date_time = date("Y-m-d H:i:s");
             $insert_comment = mysqli_query($conn, "insert into comments values('', '$post_body', '$user_logged_in', '$posted_to', '$date_time', 'no', '$post_id')");
-            echo "<p> Comment posted </p>";
         }
     ?>
 

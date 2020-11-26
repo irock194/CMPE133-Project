@@ -33,9 +33,9 @@ class User{
         }
     }
 
-    public function friend($is_username_friend){
-        $usernameSplit = "," . $is_username_friend . ",";
-        if(strstr($this->user['friends'], $usernameSplit) || $is_username_friend == $this->user['username']){
+    public function follower($is_username_follower){
+        $usernameSplit = "," . $is_username_follower . ",";
+        if(strstr($this->user['followers'], $usernameSplit) || $is_username_follower == $this->user['username']){
             return true;
         }
         else{
@@ -43,5 +43,53 @@ class User{
         }
     }
     
+    public function getFollowRequest($send_to_user) {
+        $send_from_user = $this->user['username'];
+        $follow_request_query = mysqli_query($this->conn, "select * from follow_requests where send_to_user = '$send_to_user' and send_from_user = '$send_from_user'");
+        if(mysqli_num_rows($follow_request_query) > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function sentFollowRequest($send_from_user) {
+        $send_to_user = $this->user['username'];
+        $follow_request_query = mysqli_query($this->conn, "select * from follow_requests where send_to_user = '$send_to_user' and send_from_user = '$send_from_user'");
+        if(mysqli_num_rows($follow_request_query) > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function removeFollow($remove_user){
+        $user_logged_in = $this->user['username'];
+        $query = mysqli_query($this->conn, "select followers from users where username = '$remove_user'");
+        $row = mysqli_fetch_array($query);
+        $followers_username = $row['followers'];
+
+        // search for user who is removed, replace with empty string, update the column in the user table
+        $remove_followers = str_replace($remove_user . ",", "", $this->user['followers']);
+        $update_followers = mysqli_query($this->conn, "update users set followers = '$remove_followers' where username = '$user_logged_in'");
+
+        // repeat step to remove followers/friends for other user as well
+        $remove_followers = str_replace($this->user['followers'] . ",", "", $followers_username);
+        $update_followers = mysqli_query($this->conn, "update users set followers = '$remove_followers' where username = '$remove_user'");
+    }
+
+    public function sendFollow($send_to_user){
+        $send_from_user = $this->user['username'];
+        $query = mysqli_query($this->conn, "insert into follow_requests values('', '$send_to_user', '$send_from_user')");
+    }
+
+    public function getFollowers() {
+        $username = $this->user['username'];
+        $query = mysqli_query($this->conn, "select followers from users where username = '$username'");
+        $row = mysqli_fetch_array($query);
+        return $row['followers'];
+    }
 }
 ?>

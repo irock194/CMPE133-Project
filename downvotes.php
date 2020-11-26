@@ -52,18 +52,18 @@
 
     if($num_rows > 0){
         echo '<form action = "downvotes.php?post_id=' . $post_id . '" method = "POST">
-                <input type = "submit" class="comment_downvote" name="undo_downvote_button" value = "&#xf063;">
+                <input type = "submit" class="comment_downvote" name="undo_downvote_button" value = "&#xf063;" style = "color:red;">
                 <div class = "downvote_value">
-                ' . $total_downvotes . ' Downvotes
+                ' . $total_downvotes . ' 
                 </div>
             </form>
         ';
     }
     else{
         echo '<form action = "downvotes.php?post_id=' . $post_id . '" method = "POST">
-                <input type = "submit" class="comment_downvote" name="downvote_button" value = "&#xf063;">
+                <input type = "submit" class="comment_downvote" name="downvote_button" value = "&#xf063;" style = "color:black;">
                 <div class = "downvote_value">
-                ' . $total_downvotes . ' Downvotes
+                ' . $total_downvotes . ' 
                 </div>
             </form>
         ';

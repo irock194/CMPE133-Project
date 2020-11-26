@@ -107,7 +107,7 @@ nav a:hover{
 }
 
 .post_comment iframe{
-    max-height: 700px;
+    max-height: 500px;
     width: 100%;
 }
 
@@ -149,7 +149,7 @@ nav a:hover{
     border: 0px;
     border-radius: 6px;
     height: 40px;
-    width: 250px;
+    width: 60px;
 }
 
 .newsfeedOptions form {
@@ -161,7 +161,7 @@ nav a:hover{
 .comment_upvote {
     background-color: lightgray;
     font-family: FontAwesome;
-    color: black;
+    color: green;
     border: none;
     border-radius: 6px;
     padding: 6px 4px 4px 6px;
@@ -175,7 +175,7 @@ nav a:hover{
 .comment_downvote {
     background-color: lightgray;
     font-family: FontAwesome;
-    color: black;
+    color: red;
     border: none;
     border-radius: 6px;
     padding: 6px 4px 4px 6px;
@@ -185,3 +185,67 @@ nav a:hover{
 .downvote_value {
     display: inline;
 }
+
+.search {
+    margin: 10px 0 0 20%;
+}
+
+.search #search_input {
+    border: thin solid black;
+    height: 30px;
+    width: 300px;
+    border-radius: 6px;
+    outline: none;
+    float: left;
+}
+
+.search_button {
+    border: thin solid black;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    width: 30px;
+    display: inline;
+    color: black;
+    background-color: lightgray;
+}
+
+.search_button i{
+    margin-top: 7px;
+    width: 25px;
+    height: 25px;
+}
+
+.search_results {
+    padding: 10px;
+    width: 450px;
+    height: 50px;
+}
+
+.search_results input[type = "submit"] {
+    border: none;
+    border-radius: 6px;
+    background-color: lightgreen;
+    cursor: pointer;
+    height: 25px;
+    width: auto;
+}
+
+.search_results_follow_button {
+    float: right;
+}
+
+#search_results_hr{
+    margin-bottom: 0px;
+}
+
+.user_results{  
+    margin: auto;
+    z-index: -1;
+    width: 30%;
+    min-height: 150px;
+}
+
+

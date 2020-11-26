@@ -51,18 +51,18 @@
 
     if($num_rows > 0){
         echo '<form action = "upvotes.php?post_id=' . $post_id . '" method = "POST">
-                <input type = "submit" class="comment_upvote" name="undo_upvote_button" value="&#xf062;">
+                <input type = "submit" class="comment_upvote" name="undo_upvote_button" value="&#xf062;" style = "color:green;">
                 <div class = "upvote_value">
-                ' . $total_upvotes . ' Upvotes
+                ' . $total_upvotes . ' 
                 </div>
             </form>
         ';
     }
     else{
         echo '<form action = "upvotes.php?post_id=' . $post_id . '" method = "POST">
-                <input type = "submit" class="comment_upvote" name="upvote_button" value="&#xf062;">
+                <input type = "submit" class="comment_upvote" name="upvote_button" value="&#xf062;" style = "color:black;">
                 <div class = "upvote_value">
-                ' . $total_upvotes . ' Upvotes
+                ' . $total_upvotes . ' 
                 </div>
             </form>
         ';

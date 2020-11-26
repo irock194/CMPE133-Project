@@ -46,7 +46,7 @@ class Post{
             }
 
             $user_logged_in_obj = new User($this->conn, $user_logged_in);
-            if($user_logged_in_obj->friend($added_by)){
+            if($user_logged_in_obj->follower($added_by)){
 
                 // get user
                 $user_info = mysqli_query($this->conn, "select first_name, last_name from users where username = '$added_by'");
@@ -162,8 +162,8 @@ class Post{
 
                                                         <div class = 'newsfeedOptions'>
                                                             Comments($comments_count_row)&nbsp; &nbsp; &nbsp; &nbsp;
-                                                            <iframe src ='upvotes.php?post_id=$id' scrolling='no' style='width: 170px;'></iframe>
-                                                            <iframe src ='downvotes.php?post_id=$id' scrolling='no' style='width: 170px;'></iframe>
+                                                            <iframe src ='upvotes.php?post_id=$id' scrolling='no'></iframe>
+                                                            <iframe src ='downvotes.php?post_id=$id' scrolling='no'></iframe>
                                                         </div>
 
                                                     </div>
