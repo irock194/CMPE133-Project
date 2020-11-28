@@ -19,17 +19,19 @@ else{
     <script src = "assets/js/bootstrap.js"></script>
     <script src = "assets/js/searchUser.js"></script>
 
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/navbar.css">
     <link rel = "stylesheet" href = "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel = "stylesheet" type = "text/css" href = "assets/css/boostrap.css">
-    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
+    <link rel = "stylesheet"  href = "assets/css/style.css">
 </head>
 <body>
-    <div class = "top_bar">
 
-        <div class = "logo">
-            <a href="index.php"> Social Network Feed </a>
-        </div>
-
+    <header>
+        <div class="container">
+        <h1 class="logo">
+            <a href = "index.php"> Social Network Feed</a>
+        </h1>
+        
         <div class = "search">
             <form action="search.php" method = "GET" name = search_form>
                 <input type = "text" name = "query" placeholder = "Search for users" id = "search_input">
@@ -41,18 +43,16 @@ else{
         </div>
 
         <nav>
-            <a href="#">
-                <i>Profile</i>
-            </a>
-            <a href="follow_requests.php">
-                <i>Followers</i>
-            </a>
-            <a href="helpers/logout.php">
-                <i>Logout</i>
-            </a>
+            <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="follow_requests.php">Followers</a></li>
+            <li><a href="helpers/logout.php">Logout</a></li>
+            </ul>
         </nav>
-    </div>
-
-    </body>
-    </html>
+        </div>
+        
+    </header>
+	
+</body>
+</html>
 

@@ -14,7 +14,6 @@ if(isset($_POST['post'])){
 
 ?>
 
-
 <div class = "news_feed column">
     <form class = "post_feed" action = "index.php" method = "POST">
         <textarea name = "post_text" id = "post_text" placeholder = "What's on your mind?"></textarea>
@@ -29,6 +28,7 @@ if(isset($_POST['post'])){
     ?>
 
 </div>
+
 
 </body>
 </html>

@@ -8,10 +8,6 @@ require 'helpers/login_helper.php';
 <head>
     <title> Registration Page</title>
     <link rel = "stylesheet" type = "text/css" href = "assets/css/register.css">
-<<<<<<< HEAD
-=======
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
->>>>>>> fc6b9b6a5ce9b762de9839ab97f6c9de34d2b70c
 </head>
 <body>
 
@@ -21,11 +17,7 @@ require 'helpers/login_helper.php';
             <div class="login_title">
                 <form action = "register.php" method = "POST">
                     <ul class="list">
-<<<<<<< HEAD
                         <li>Login</li>
-=======
-                        <li>Customer Login</li>
->>>>>>> fc6b9b6a5ce9b762de9839ab97f6c9de34d2b70c
                         <li><input type="email" name = "login_email" placeholder = "Enter Email Address"/></li>
                         <li><input type="password" name = "login_password" placeholder = "Enter Password"/></li>
                         <li><input type="submit" name = "login_button" value = "Login"/></li>
