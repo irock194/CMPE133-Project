@@ -31,7 +31,10 @@ else{
         <h1 class="logo">
             <a href = "index.php"> Social Network Feed</a>
         </h1>
-        
+
+        <?php
+            echo "<h1 class=\"logo\"> <b>Welcome $user_logged_in !!!</b></h1>";
+        ?>
         <div class = "search">
             <form action="search.php" method = "GET" name = search_form>
                 <input type = "text" name = "query" placeholder = "Search for users" id = "search_input">

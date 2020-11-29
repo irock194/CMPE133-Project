@@ -29,7 +29,7 @@ CREATE TABLE `upvotes` (
   PRIMARY KEY (`id`)
   );
 
-CREATE TABLE `upvotes` (
+CREATE TABLE `downvotes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL,
   `post_id` int(11) NOT NULL,
