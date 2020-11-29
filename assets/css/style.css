@@ -7,7 +7,7 @@
     z-index: -1;
 }
 
-.news_feed{  
+.news_feed{
     margin: auto;
     z-index: -1;
     width: 70%;
@@ -136,4 +136,9 @@
 
 .downvote_value {
     display: inline;
+}
+
+.welcome {
+  position: relative;
+  left: 50%;
 }
