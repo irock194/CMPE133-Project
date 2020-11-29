@@ -44,7 +44,7 @@ else{
 
         <nav>
             <ul>
-            <li><a href="#">Profile</a></li>
+            <li><a href="profile.php">Profile</a></li>
             <li><a href="follow_requests.php">Followers</a></li>
             <li><a href="helpers/logout.php">Logout</a></li>
             </ul>
