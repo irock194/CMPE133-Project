@@ -29,13 +29,6 @@ CREATE TABLE `upvotes` (
   PRIMARY KEY (`id`)
   );
   
-CREATE TABLE `upvotes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(64) NOT NULL,
-  `post_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-  );
-  
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_body` text NOT NULL,
