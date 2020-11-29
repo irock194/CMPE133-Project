@@ -10,7 +10,7 @@ CREATE TABLE `users` (
   `followers` text NOT NULL,
   PRIMARY KEY (`id`)
   );
-  
+
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `body` text NOT NULL,
@@ -21,21 +21,21 @@ CREATE TABLE `posts` (
   `downvotes` int(11) NOT NULL,
   PRIMARY KEY (`id`)
   );
-  
+
 CREATE TABLE `upvotes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(60) NOT NULL,
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
   );
-  
-CREATE TABLE `upvotes` (
+
+CREATE TABLE `downvotes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(64) NOT NULL,
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
   );
-  
+
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `post_body` text NOT NULL,
