@@ -28,6 +28,13 @@ CREATE TABLE `upvotes` (
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
   );
+
+CREATE TABLE `downvotes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(60) NOT NULL,
+  `post_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+  );
   
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

@@ -37,8 +37,8 @@
                 ?>
 
                 <form action="follow_requests.php" method = "POST">
-                    <input type = "submit" name = "accept_follow_request<?php echo $send_from_user; ?>" id = "accept_follow_button" value = "Accept and follow back">
-                    <input type = "submit" name = "decline_follow_request<?php echo $send_from_user; ?>" id = "decline_follow_button" value = "Decline follow request">
+                    <input type = "submit" name = "accept_follow_request<?php echo $send_from_user; ?>" id = "accept_follow_button" value = "Accept and follow back" style = 'background-color: lightgreen; border-radius: 6px; border-outline: none;'>
+                    <input type = "submit" name = "decline_follow_request<?php echo $send_from_user; ?>" id = "decline_follow_button" value = "Decline follow request" style = 'background-color: red; border-radius: 6px; border-outline: none;'>
                 </form>
 
                 <?php

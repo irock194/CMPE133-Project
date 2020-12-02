@@ -52,7 +52,7 @@
 
             if($user['username'] != $row['username']) {
                 if($new_user->follower($row['username'])){
-                    $button_obj = "<input type = 'submit' name = '" . $row['username'] . "' class = 'remove' value = 'Remove follower' style = 'background-color: red;'>";
+                    $button_obj = "<input type = 'submit' name = '" . $row['username'] . "' class = 'remove' value = 'Unfollow' style = 'background-color: red;'>";
                 }
                 else if($new_user->getFollowRequest($row['username'])){
                     $button_obj = "<input type = 'submit' name = '" . $row['username'] . "' class = 'notification' value = 'Follow Request Sent'>";
